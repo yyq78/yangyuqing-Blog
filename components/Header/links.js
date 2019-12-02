@@ -1,0 +1,32 @@
+export const links = [
+    {
+        path:"/",
+        icon:"home",
+        text:"首页",
+        isActive:true,
+    },
+    {
+        path:"/types",
+        icon:"bulb",
+        text:"分类",
+        isActive:false,
+    },
+    {
+        path:"/tags",
+        icon:"tags",
+        text:"标签",
+        isActive:false,
+    },
+    {
+        path:"/archives",
+        icon:"file",
+        text:"归档",
+        isActive:false,
+    },
+    {
+        path:"/about",
+        icon:"share-alt",
+        text:"关于我",
+        isActive:false,
+    },
+];
