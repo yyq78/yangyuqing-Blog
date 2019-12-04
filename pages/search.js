@@ -1,19 +1,26 @@
 import Layout from '../components/Layout';
 import fetch from 'isomorphic-unfetch';
-function Search() {
+import Router from 'next/router';
+function Search(props) {
     return (
       <Layout>
-        <p>search</p>
+        <h1>{props.show.name}</h1>
       </Layout>
     );
 }
-Search.getInitialProps = async function() {
-    const res = await fetch('https://api.tvmaze.com/search/shows?q=batman');
-    const data = await res.json();
-  
-    console.log(`Show data fetched. Count: ${data.length}`);
-  
-    return {
-      shows: data.map(entry => entry.show)
-    };
+Search.getInitialProps = async function(context) {
+  const { query } = context.query;
+  console.log(query);
+  // const res = await fetch(`https://api.tvmaze.com/shows/${query}`);
+  // const show = await res.json();
+  // console.log(`Fetched show: ${show.name}`);
+  return {
+    show:{
+      name:`${query}`
+    }
+  }
+  // return { show };
   };
+
+export default Search;
+

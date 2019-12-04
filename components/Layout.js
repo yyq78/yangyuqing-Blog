@@ -1,7 +1,10 @@
-
 import { useRouter } from 'next/router';
+
 import LinkItem from './Header/LinkItem';
 import {links} from './Header/links';
+import SearchBar from './Header/SearchBar';
+
+
 const Layout = (props)=>{
     const router = useRouter();
     for(var i=0;i<links.length;i++){
@@ -12,9 +15,10 @@ const Layout = (props)=>{
         }
     }
     return (
-        <div className="container">
-        <div className="header">
-            <div className="menu">
+    <div className="container">
+        <div className="header-wrap">
+            <div className="header">
+                <div className="menu">
                 <h1 className="title">Blog</h1>
                 <ul className="links">
                     {
@@ -29,7 +33,9 @@ const Layout = (props)=>{
                         })
                     }
                 </ul>
-                <div>
+            </div>
+                <div className="right">
+                    <SearchBar/>
                 </div>
             </div>
         </div>
@@ -48,32 +54,34 @@ const Layout = (props)=>{
                 overflow:hidden;
                 line-height:48px;
             }
-            
+            .header-wrap{
+                background: #1B1C1D;
+                color: rgba(255,255,255,.9);
+                
+            }
+            .header{
+                width: 80%;
+                margin:0 auto;
+                display:flex;
+                justify-content:space-between;
+                align-items:center;
+            }
             .menu{
-                width: 723px;
-                margin: 0 auto;
                 overflow:hidden;
                 display:flex;
                 justify-content:center;
                 align-items:center;
             }
-            .header{
-                background: #1B1C1D;
-                color: rgba(255,255,255,.9);
-            }
             .title{
-                float:left;
                 color: #00B5AD;
                 font-size:24px;
-                
                 padding:19px 22px;
             }
             .links{
-                float:left;
                 overflow:hidden;
             }
             
-    `}</style>
+        `}</style>
     </div>
     )
 }
