@@ -60,7 +60,7 @@ const Layout = (props)=>{
                 
             }
             .header{
-                width: 80%;
+                width: 85%;
                 margin:0 auto;
                 display:flex;
                 justify-content:space-between;
@@ -82,6 +82,15 @@ const Layout = (props)=>{
             }
             
         `}</style>
+        <style jsx global>
+            {`
+            body{
+                padding:0;
+                margin:0;
+                font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+            }
+            `}
+        </style>
     </div>
     )
 }
