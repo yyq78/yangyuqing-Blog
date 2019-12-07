@@ -1,62 +1,10 @@
 
 import Layout from '../components/Layout'
-import {Icon} from 'antd'
 /*前端模拟数据*/
 import list from '../components/static/blogsApi';
-const BlogItem = ({item,index}) => (
-  <li className="blog-item" key={index}>
-    <div className="left">
-      <div>{item.title}</div>
-      <p>{item.description}</p>
-      <ul className="ul horizontal">
-        <li>{item.author}</li>
-        <li><Icon type="calendar" className="icon"/> {item.date}</li>
-        <li><Icon type="eye" className="icon"/> {item.watch}</li>
-        <li>{item.type}</li>
-      </ul>
-    </div>
-    <div className="right">
-      <img src={item.img} className="img"/>
-    </div>
-    <style jsx>{`
-      .blog-item{
-        display:flex;
-        align-items:center;
-        padding:28px 21px;
-      }
-      .left{
-        flex:1;
-      }
-      .left .ul.horizontal{
-        display:flex;
-        padding:0!important;
-        list-style:none;
-        font-size:12px;
-        align-items:center;
-      }
-      .left .ul li{
-        margin-right:12px;
-      }
-      .left .ul li:last-child{
-        flex:1;
-        text-align:right;
-        margin-right:0;
-      }
-      .right{
-        width:173px;
-        height:120px;
-        padding:14px;
-      }
-      .right .img{
-        width:100%;
-        height:100%;
-      }
-      .icon{
-        vertical-align:text-bottom;
-      }
-    `}</style>
-  </li>
-)
+import BlogItem from '../components/Bolgs/BlogItem';
+import Section from '../components/Section/Section';
+import Types from '../components/Section/types';
 const Index = (props) => (
   <Layout>
     <div className="container">
@@ -79,9 +27,15 @@ const Index = (props) => (
         </div>
       </div>
       <div className="right-wrap">
-        <ul className="ul type"></ul>
-        <ul className="ul tag"></ul>
-        <ul className="ul new"></ul>
+        <Section title="分类" icon="bulb" link="types">
+          <Types></Types>
+        </Section>
+        <Section title="标签" icon="tags" link="tags">
+
+        </Section>
+        <Section title="最新推荐" icon="book">
+
+        </Section>
       </div>
       
     </div>
@@ -122,12 +76,6 @@ const Index = (props) => (
       }
       .blogs .ul{
         padding:14px;
-      }
-      .right-wrap ul{
-        width:324px;
-        height:640px;
-        border:1px solid silver;
-        border-radius:4px;
       }
       `}</style>
   </Layout>

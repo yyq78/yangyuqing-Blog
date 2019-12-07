@@ -89,6 +89,9 @@ const Layout = (props)=>{
                 margin:0;
                 font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
             }
+            ul{
+                list-style: none;
+            }
             `}
         </style>
     </div>
