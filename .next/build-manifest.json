@@ -27,6 +27,14 @@
     "/p/[id]": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
+    ],
+    "/tags/[id]": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/types/[id]": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ]
   }
 }

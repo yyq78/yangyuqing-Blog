@@ -12,7 +12,7 @@ export const links = [
         isActive:false,
     },
     {
-        path:"/tags",
+        path:"/tags/-1",
         icon:"tags",
         text:"标签",
         isActive:false,

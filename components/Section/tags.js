@@ -1,20 +1,21 @@
-import Popver from '../popver' 
+import Popver from '../popver';
+import Link from 'next/link';
 const Tags = ()=>(
     <div className="wrap">
         <Popver>
-            <div>java<span>1</span></div>
+        <Link href="/tags/1"><div>java<span>1</span></div></Link>
         </Popver>
         <Popver>
-            <div>python<span>1</span></div>
+        <Link href="/tags/2"><div>python<span>1</span></div></Link>
         </Popver>
         <Popver>
-            <div>后端开发<span>1</span></div>
+        <Link href="/tags/3"><div>后端开发<span>1</span></div></Link>
         </Popver>
         <Popver>
-            <div>算法<span>1</span></div>
+        <Link href="/tags/4"><div>算法<span>1</span></div></Link>
         </Popver>
         <Popver>
-            <div>基础知识<span>1</span></div>
+        <Link href="/tags/5"><div>基础知识<span>1</span></div></Link>
         </Popver>
         <style jsx>
             {`
