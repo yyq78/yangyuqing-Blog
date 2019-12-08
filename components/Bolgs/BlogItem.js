@@ -1,11 +1,24 @@
 import { Icon } from 'antd';
-const BlogItem = ({item,index}) => (
+import {useRouter} from 'next/router'
+import Link from 'next/link';
+const BlogItem = ({item,index}) => {
+  const router = useRouter();
+  function toPage(){
+    router.push(`/p/${item.id}`);
+  }
+  return (
     <li className="blog-item" key={index}>
       <div className="left">
-        <div className="header">{item.title}</div>
+        <div className="header">
+          <Link href="/p/[id]" as={`/p/${item.id}`}>
+            <a>{item.title}</a>
+          </Link>
+        </div>
         <p className="text">{item.description}</p>
         <ul className="ul horizontal">
-          <li><img src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" className="img"/></li>
+          <li>
+              <img src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" className="img"/>
+          </li>
           <li><a className="weight author">{item.author}</a></li>
           <li><Icon type="calendar" className="icon"/> {item.date}</li>
           <li><Icon type="eye" className="icon"/> {item.watch}</li>
@@ -13,9 +26,14 @@ const BlogItem = ({item,index}) => (
         </ul>
       </div>
       <div className="right">
-        <img src={item.img} className="img"/>
+        <img src={item.img} className="img" onClick={toPage}/>
       </div>
       <style jsx>{`
+        a{
+          text-decoration:none;
+          color:#333;
+          display:inline-block;
+        }
         .blog-item{
           display:flex;
           align-items:center;
@@ -87,4 +105,5 @@ const BlogItem = ({item,index}) => (
       `}</style>
     </li>
   )
+}
   export default BlogItem;

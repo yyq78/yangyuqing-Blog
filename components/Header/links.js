@@ -6,7 +6,7 @@ export const links = [
         isActive:true,
     },
     {
-        path:"/types",
+        path:"/types/-1",
         icon:"bulb",
         text:"分类",
         isActive:false,

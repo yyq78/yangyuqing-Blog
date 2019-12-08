@@ -5,6 +5,8 @@ import list from '../components/static/blogsApi';
 import BlogItem from '../components/Bolgs/BlogItem';
 import Section from '../components/Section/Section';
 import Types from '../components/Section/types';
+import Tags from '../components/Section/tags';
+import Intro from '../components/Section/intro';
 const Index = (props) => (
   <Layout>
     <div className="container">
@@ -19,7 +21,7 @@ const Index = (props) => (
               /*前端模拟数据,后端写好后应替换为props属性下的值*/
               list.lists.map((item, index) => {
                 return (
-                <BlogItem item={item} index={index}/>
+                <BlogItem item={item} key={index}/>
                 )
               })
             }
@@ -31,10 +33,10 @@ const Index = (props) => (
           <Types></Types>
         </Section>
         <Section title="标签" icon="tags" link="tags">
-
+          <Tags></Tags>
         </Section>
         <Section title="最新推荐" icon="book">
-
+          <Intro></Intro>
         </Section>
       </div>
       
