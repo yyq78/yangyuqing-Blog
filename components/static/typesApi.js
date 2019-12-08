@@ -1,0 +1,33 @@
+const types = [
+    {
+        name:"数据结构与算法",
+        articleCount:1,
+        id:1,
+    },
+    {
+        name:"小项目",
+        articleCount:1,
+        id:2,
+    },
+    {
+        name:"Leetcode",
+        articleCount:1,
+        id:3,
+    },
+    {
+        name:"操作系统",
+        articleCount:0,
+        id:4,
+    },
+    {
+        name:"计算机网络",
+        articleCount:1,
+        id:5,
+    },
+    {
+        name:"数据库",
+        articleCount:0,
+        id:6,
+    },
+];
+export default types;

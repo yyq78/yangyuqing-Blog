@@ -1,13 +1,20 @@
 import Link from 'next/link';
 import Popver from '../popver';
+import list from '../static/typesApi';
 const Types = ()=>(
     <div className="sectionUl">
-        <Link href="/types/1"><div className="li"><a>数据结构与算法</a><Popver><span>1</span></Popver></div></Link>
-        <Link href="/types/2"><div className="li"><a>小项目</a><Popver><span>1</span></Popver></div></Link>
-        <Link href="/types/3"><div className="li"><a>Leetcode</a><Popver><span>1</span></Popver></div></Link>
-        <Link href="/types/4"><div className="li"><a>操作系统</a><Popver><span>1</span></Popver></div></Link>
-        <Link href="/types/5"><div className="li"><a>计算机网络</a><Popver><span>1</span></Popver></div></Link>
-        <Link href="/types/6"><div className="li"><a>数据库</a><Popver><span>1</span></Popver></div></Link>
+        {
+            list.map((item)=>{
+                return (
+                    <Link href={`/types/${item.id}`}>
+                        <div className="li">
+                            <a>{item.name}</a>
+                            <Popver><span>{item.articleCount}</span></Popver>
+                        </div>
+                    </Link>
+                )
+            })
+        }
         <style jsx>{`
             .sectionUl{
                 margin:14px;

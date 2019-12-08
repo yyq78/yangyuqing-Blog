@@ -1,22 +1,20 @@
 import Popver from '../popver';
 import Link from 'next/link';
+import list from '../static/tagsApi';
 const Tags = ()=>(
     <div className="wrap">
-        <Popver>
-        <Link href="/tags/1"><div>java<span>1</span></div></Link>
-        </Popver>
-        <Popver>
-        <Link href="/tags/2"><div>python<span>1</span></div></Link>
-        </Popver>
-        <Popver>
-        <Link href="/tags/3"><div>后端开发<span>1</span></div></Link>
-        </Popver>
-        <Popver>
-        <Link href="/tags/4"><div>算法<span>1</span></div></Link>
-        </Popver>
-        <Popver>
-        <Link href="/tags/5"><div>基础知识<span>1</span></div></Link>
-        </Popver>
+        {list.map((item)=>{
+            return (
+            <Popver>
+                <Link href={`/tags/${item.id}`}>
+                    <div>
+                        {item.name}
+                        <span>{item.articleCount}</span>
+                    </div>
+                </Link>
+            </Popver>
+            )
+        })}
         <style jsx>
             {`
                 .wrap{
