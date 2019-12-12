@@ -9,7 +9,7 @@ const Section = (props)=>(
             </div>
             {props.link?(
                 <div>
-                <Link href="/types">
+                <Link href={`/${props.link}`}>
                     <a className="link">more <span className="align"><Icon type="double-right" /></span></a>
                 </Link>
             </div>
@@ -20,7 +20,8 @@ const Section = (props)=>(
             {`
                 .wrap{
                     width:324px;
-                    border:1px solid silver;
+                    border:1px solid #D4D4D5;
+                    box-shadow: none;
                     border-radius:4px;
                     font-size:14px;
                     margin-bottom:2rem;

@@ -1,4 +1,7 @@
-const Popver = (props)=> (
+const Popver = (props)=> {
+    const sizeNum = props.size.split("px")[0];
+    const triangleLeft= Math.ceil(props.size.split("px")[0]/2)+1;
+    return (
     <div className="label">
         {props.children}
         <style jsx>
@@ -6,30 +9,30 @@ const Popver = (props)=> (
             .label{
                 display:flex;
                 justify-content:space-between;
+                align-items: center;
                 text-align:center;
-                color: #00B5AD;
-                border-color: #00B5AD;
+                padding:${props.size} ${sizeNum>8?props.size:`8px`};
+                border-color: ${props.color};
                 position:relative;
-                border: 1px solid #00B5AD;
-                border-radius:4px;
-                margin:4px;
-                font-size:12px;
+                border: 1px solid ${props.color};
+                border-radius:${props.radius};
                 font-weight:bold;
             }
             .label:before{
                 content:"";
-                width:7px;
-                height:7px;
+                width:${props.size};
+                height:${props.size};
                 transform:rotate(-45deg);
                 position:absolute;
-                border-top: 1px solid #00B5AD;
-                border-left: 1px solid #00B5AD;
+                border-top: 1px solid ${props.color};
+                border-left: 1px solid ${props.color};
                 background-color:white;
-                top:5.5px;
-                left:-5px;
+                top: 35%;
+                left:-${triangleLeft}px;
             }
             `}
         </style>
     </div>
-)
+    );
+}
 export default Popver;

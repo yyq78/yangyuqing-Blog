@@ -6,13 +6,13 @@ export const links = [
         isActive:true,
     },
     {
-        path:"/types/-1",
+        path:"/types/1",
         icon:"bulb",
         text:"分类",
         isActive:false,
     },
     {
-        path:"/tags/-1",
+        path:"/tags/1",
         icon:"tags",
         text:"标签",
         isActive:false,

@@ -3,13 +3,14 @@ const Panel = (props)=>{
         <div className="panel">
             <div className="panel-head">
                 <div className="left">{props.title}</div>
-                <div className="right">共 <span>{props.subtitle}</span>篇</div>
+                <div className="right">共 <span>{props.subtitle}</span> 篇</div>
             </div>
             {props.children}
             <style jsx>
                 {`
                 .panel{
-                    border:1px solid silver;
+                    border:1px solid #D4D4D5;
+                    box-shadow: none;
                     border-radius:4px;
                     width:100%;
                 }
@@ -18,7 +19,7 @@ const Panel = (props)=>{
                     display:flex;
                     justify-content:space-between;
                     align-items:center;
-                    border-bottom:1px solid silver;
+                    border-bottom:1px solid #D4D4D5;
                   }
                   .panel-head .left{
                     color: #00B5AD;

@@ -1,13 +1,13 @@
 import { Icon } from 'antd';
 import {useRouter} from 'next/router'
 import Link from 'next/link';
-const BlogItem = ({item,index}) => {
+const BlogItem = ({item,key}) => {
   const router = useRouter();
   function toPage(){
     router.push(`/p/${item.id}`);
   }
   return (
-    <li className="blog-item" key={index}>
+    <li className="blog-item" key={key}>
       <div className="left">
         <div className="header">
           <Link href="/p/[id]" as={`/p/${item.id}`}>

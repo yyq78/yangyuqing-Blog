@@ -28,10 +28,10 @@ const Index = (props) => (
         </Panel>
       </div>
       <div className="right-wrap">
-        <Section title="分类" icon="bulb" link="types">
+        <Section title="分类" icon="bulb" link="types/-1">
           <Types></Types>
         </Section>
-        <Section title="标签" icon="tags" link="tags">
+        <Section title="标签" icon="tags" link="tags/-1">
           <Tags></Tags>
         </Section>
         <Section title="最新推荐" icon="book">

@@ -5,14 +5,17 @@ const Tags = ()=>(
     <div className="wrap">
         {list.map((item)=>{
             return (
-            <Popver>
-                <Link href={`/tags/${item.id}`}>
-                    <div>
-                        {item.name}
-                        <span>{item.articleCount}</span>
-                    </div>
-                </Link>
-            </Popver>
+                <div className="tag-item">
+                    <Popver radius="4px" size="3px" color="#00B5AD">
+                        <Link href={`/tags/${item.id}`}>
+                            <div className="text">
+                                <span>{item.name}</span>
+                                <span className="count">{item.articleCount}</span>
+                            </div>
+                        </Link>
+                    </Popver>
+                </div>
+            
             )
         })}
         <style jsx>
@@ -22,11 +25,14 @@ const Tags = ()=>(
                     flex-wrap:wrap;
                     padding:14px;
                 }
-                .wrap div{
-                    padding:5px 10px;
+                .tag-item{
+                    margin:6px;
                 }
-                .wrap span{
-                    padding:8px;
+                .text{
+                    color:#00B5AD;
+                }
+                .count{
+                    padding:6px;
                 }
             `}
         </style>

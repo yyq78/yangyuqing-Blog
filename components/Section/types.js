@@ -9,7 +9,7 @@ const Types = ()=>(
                     <Link href={`/types/${item.id}`}>
                         <div className="li">
                             <a>{item.name}</a>
-                            <Popver><span>{item.articleCount}</span></Popver>
+                            <Popver radius="4px" size="4px" color="#00B5AD"><span className="count">{item.articleCount}</span></Popver>
                         </div>
                     </Link>
                 )
@@ -35,8 +35,8 @@ const Types = ()=>(
                 background: rgba(0,0,0,.03);
                 color: rgba(0,0,0,.95);
             }
-            .sectionUl span{
-                padding: .2em .78571429em;
+            .sectionUl .li .count{
+                color:#00B5AD;
             }
         `}</style>
     </div>
