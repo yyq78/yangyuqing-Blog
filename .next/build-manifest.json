@@ -16,11 +16,11 @@
       "static/runtime/polyfills.js",
       "static/runtime/polyfills.js.map"
     ],
-    "/tags/[id]": [
+    "/about": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/types/[id]": [
+    "/archives": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
