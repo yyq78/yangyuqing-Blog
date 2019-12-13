@@ -44,9 +44,10 @@ export default function Archives() {
             font-size:14px;
             color:rgba(0,0,0,.85);
             list-style-type:disc;
+           
           }
           .list li{
-            border:1px solid rgba(34,36,40,.15);
+            border:1px solid #d5d5d5;
             border-radius: 4px 4px 0px 0px;
             padding:13px 16px;
             display:flex;
@@ -67,6 +68,7 @@ export default function Archives() {
           }
           .list li:last-child{
             border-radius:0px 0px 4px 4px!important;
+            box-shadow: 0 1px 2px 0 rgba(34,36,38,.35);
           }
           
           `}

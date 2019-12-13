@@ -79,6 +79,7 @@ export default function Types() {
           }
           .section{
             border:1px solid #D4D4D5;
+            box-shadow: 0 1px 2px 0 rgba(34,36,38,.35);
             border-top: 2px solid #00B5AD;
             margin-top: 1rem;
             border-radius: .28571429rem .28571429rem 0 0;

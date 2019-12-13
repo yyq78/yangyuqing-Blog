@@ -3,14 +3,14 @@ const Panel = (props)=>{
         <div className="panel">
             <div className="panel-head">
                 <div className="left">{props.title}</div>
-                <div className="right">共 <span>{props.subtitle}</span> 篇</div>
+                {props.subtitle?<div className="right">共 <span>{props.subtitle}</span> 篇</div>:null}
             </div>
             {props.children}
             <style jsx>
                 {`
                 .panel{
                     border:1px solid #D4D4D5;
-                    box-shadow: none;
+                    box-shadow: 0 1px 2px 0 rgba(34,36,38,.35);
                     border-radius:4px;
                     width:100%;
                 }
